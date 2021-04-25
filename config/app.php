@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => 'TymonJWTAuthFacadesJWTAuth',
         'JWTFactory' => 'TymonJWTAuthFacadesJWTFactory',
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

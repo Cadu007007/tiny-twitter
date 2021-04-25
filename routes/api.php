@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\FollowController;
 use App\Http\Controllers\Api\TweetController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::group(['prefix' => 'tweets', 'middleware' => 'auth.api'], function () {
 Route::group(['prefix' => 'follow', 'middleware' => 'auth.api'], function () {
     Route::get('change/{id}', [FollowController::class, 'followChange']);
 });
+
+Route::get('report/download', [ReportController::class, 'download']);

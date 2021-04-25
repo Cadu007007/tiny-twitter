@@ -67,6 +67,21 @@ class UserService
     }
 
     /**
+     * calling user repo to make pdf
+     *
+     * @param null
+     *
+     * @return PDF
+     *
+     * @author Amr Degheidy
+     *
+     **/
+    public function downloadReport()
+    {
+        return $this->userRepository->makeReport();
+    }
+
+    /**
      * authenticate user to current guard
      *
      * @param $username
